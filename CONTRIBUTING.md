@@ -1,6 +1,6 @@
 # Project Info
 
-First of all, thank you everyone who made pull requests for Uptime Kuma, I never thought GitHub Community can be that nice! And also because of this, I also never thought other people actually read my code and edit my code. It is not structured and commented so well, lol. Sorry about that.
+First of all, thank you everyone who made pull requests for Uptime ping, I never thought GitHub Community can be that nice! And also because of this, I also never thought other people actually read my code and edit my code. It is not structured and commented so well, lol. Sorry about that.
 
 The project was created with vite.js (vue3). Then I created a subdirectory called "server" for server part. Both frontend and backend share the same package.json.
 
@@ -25,7 +25,7 @@ The frontend code build into "dist" directory. The server (express.js) exposes t
 - src (Frontend source code)
 - test (unit test)
 
-## Can I create a pull request for Uptime Kuma?
+## Can I create a pull request for Uptime ping?
 
 Generally, if the pull request is working fine, and it does not affect any existing logic, workflow and performance, I will merge into the master branch once it is tested.
 
@@ -39,7 +39,7 @@ If you are not sure whether I will accept your pull request, feel free to create
 1. Create an empty commit
    `git commit -m "[empty commit] pull request for <YOUR TASK NAME>" --allow-empty`
 1. Push to your fork repo
-1. Create a pull request: https://github.com/louislam/uptime-kuma/compare
+1. Create a pull request: https://github.com/truenorth12lds/easy-ping/compare
 1. Write a proper description
 1. Click "Change to draft"
 
@@ -165,7 +165,7 @@ npm run build
 
 ### Frontend Details
 
-Uptime Kuma Frontend is a single page application (SPA). Most paths are handled by Vue Router.
+Uptime ping Frontend is a single page application (SPA). Most paths are handled by Vue Router.
 
 The router is in `src/router.js`
 
@@ -205,18 +205,18 @@ Patch release = the third digit ([Semantic Versioning](https://semver.org/))
 
 ## Translations
 
-Please read: https://github.com/louislam/uptime-kuma/tree/master/src/languages
+Please read: https://github.com/truenorth12lds/easy-ping/tree/master/src/languages
 
 ## Wiki
 
 Since there is no way to make a pull request to wiki's repo, I have set up another repo to do that.
 
-https://github.com/louislam/uptime-kuma-wiki
+https://github.com/truenorth12lds/easy-ping-wiki
 
 ## Maintainer
 
 Check the latest issues and pull requests:
-https://github.com/louislam/uptime-kuma/issues?q=sort%3Aupdated-desc
+https://github.com/truenorth12lds/easy-ping/issues?q=sort%3Aupdated-desc
 
 ### Release Procedures
 
@@ -232,7 +232,7 @@ https://github.com/louislam/uptime-kuma/issues?q=sort%3Aupdated-desc
 
 Checking:
 
-- Check all tags is fine on https://hub.docker.com/r/louislam/uptime-kuma/tags
+- Check all tags is fine on https://hub.docker.com/r/truenorth12lds/easy-ping/tags
 - Try the Docker image with tag 1.X.X (Clean install / amd64 / arm64 / armv7)
 - Try clean installation with Node.js
 
@@ -241,9 +241,9 @@ Checking:
 #### Setup Repo
 
 ```bash
-git clone https://github.com/louislam/uptime-kuma-wiki.git
-cd uptime-kuma-wiki
-git remote add production https://github.com/louislam/uptime-kuma.wiki.git
+git clone https://github.com/truenorth12lds/easy-ping-wiki.git
+cd easy-ping-wiki
+git remote add production https://github.com/truenorth12lds/easy-ping.wiki.git
 ```
 
 #### Push to Production Wiki

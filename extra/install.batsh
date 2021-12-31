@@ -3,18 +3,18 @@
 // The command is working on Windows PowerShell and Docker for Windows only.
 
 
-// curl -o kuma_install.sh https://raw.githubusercontent.com/louislam/uptime-kuma/master/install.sh && sudo bash kuma_install.sh
+// curl -o ping_install.sh https://raw.githubusercontent.com/truenorth12lds/easy-ping/master/install.sh && sudo bash ping_install.sh
 println("=====================");
-println("Uptime Kuma Installer");
+println("Uptime ping Installer");
 println("=====================");
 println("Supported OS: CentOS 7/8, Ubuntu >= 16.04 and Debian");
 println("---------------------------------------");
 println("This script is designed for Linux and basic usage.");
-println("For advanced usage, please go to https://github.com/louislam/uptime-kuma/wiki/Installation");
+println("For advanced usage, please go to https://github.com/truenorth12lds/easy-ping/wiki/Installation");
 println("---------------------------------------");
 println("");
-println("Local - Install Uptime Kuma in your current machine with git, Node.js 14 and pm2");
-println("Docker - Install Uptime Kuma Docker container");
+println("Local - Install Uptime ping in your current machine with git, Node.js 14 and pm2");
+println("Docker - Install Uptime ping Docker container");
 println("");
 
 if ("$1" != "") {
@@ -81,7 +81,7 @@ function deb() {
 }
 
 if (type == "local") {
-    defaultInstallPath = "/opt/uptime-kuma";
+    defaultInstallPath = "/opt/easy-ping";
 
     if (exists("/etc/redhat-release")) {
         os = call("cat", "/etc/redhat-release");
@@ -195,13 +195,13 @@ if (type == "local") {
 
    bash("mkdir -p $installPath");
    bash("cd $installPath");
-   bash("git clone https://github.com/louislam/uptime-kuma.git .");
+   bash("git clone https://github.com/truenorth12lds/easy-ping.git .");
    bash("npm run setup");
 
-   bash("pm2 start server/server.js --name uptime-kuma -- --port=$port");
+   bash("pm2 start server/server.js --name easy-ping -- --port=$port");
 
 } else {
-    defaultVolume = "uptime-kuma";
+    defaultVolume = "easy-ping";
 
     bash("check=$(docker -v)");
     if (check == "") {
@@ -239,7 +239,7 @@ if (type == "local") {
     println("Port: $port");
     println("Volume: $volume");
     bash("docker volume create $volume");
-    bash("docker run -d --restart=always -p $port:3001 -v $volume:/app/data --name uptime-kuma louislam/uptime-kuma:1");
+    bash("docker run -d --restart=always -p $port:3001 -v $volume:/app/data --name easy-ping truenorth12lds/easy-ping:1");
 }
 
 println("http://localhost:$port");

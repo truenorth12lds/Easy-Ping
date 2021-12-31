@@ -101,7 +101,7 @@ router.get("/api/status-page/config", async (_request, response) => {
     }
 
     if (! config.title) {
-        config.title = "Uptime Kuma";
+        config.title = "Uptime ping";
     }
 
     response.json(config);

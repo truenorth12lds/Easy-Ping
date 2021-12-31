@@ -1,4 +1,4 @@
-console.log("== Uptime Kuma Reset Password Tool ==");
+console.log("== Uptime ping Reset Password Tool ==");
 
 console.log("Loading the database");
 

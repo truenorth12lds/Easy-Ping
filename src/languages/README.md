@@ -6,6 +6,6 @@
 4. Your language file should be filled in. You can translate now.
 5. Translate `src/components/settings/Security.vue` (search for a `Confirm` component with `rel="confirmDisableAuth"`).
 6. Add it into `languageList` constant.
-7. Make a [pull request](https://github.com/louislam/uptime-kuma/pulls) when you have done.
+7. Make a [pull request](https://github.com/truenorth12lds/easy-ping/pulls) when you have done.
 
-If you do not have programming skills, let me know in [the issues section](https://github.com/louislam/uptime-kuma/issues). I will assist you. 😏
+If you do not have programming skills, let me know in [the issues section](https://github.com/truenorth12lds/easy-ping/issues). I will assist you. 😏

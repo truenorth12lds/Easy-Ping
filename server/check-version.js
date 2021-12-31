@@ -9,7 +9,7 @@ let interval;
 exports.startInterval = () => {
     let check = async () => {
         try {
-            const res = await axios.get("https://uptime.kuma.pet/version");
+            const res = await axios.get("https://uptime.ping.pet/version");
 
             // For debug
             if (process.env.TEST_CHECK_VERSION === "1") {

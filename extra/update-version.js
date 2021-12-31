@@ -70,7 +70,7 @@ function updateWiki(oldVersion, newVersion) {
 
     safeDelete(wikiDir);
 
-    child_process.spawnSync("git", ["clone", "https://github.com/louislam/uptime-kuma.wiki.git", wikiDir]);
+    child_process.spawnSync("git", ["clone", "https://github.com/truenorth12lds/easy-ping.wiki.git", wikiDir]);
     let content = fs.readFileSync(howToUpdateFilename).toString();
     content = content.replaceAll(`git checkout ${oldVersion}`, `git checkout ${newVersion}`);
     fs.writeFileSync(howToUpdateFilename, content);

@@ -139,7 +139,7 @@ export default {
 
         downloadBackup() {
             let time = dayjs().format("YYYY_MM_DD-hh_mm_ss");
-            let fileName = `Uptime_Kuma_Backup_${time}.json`;
+            let fileName = `easy_ping_Backup_${time}.json`;
             let monitorList = Object.values(this.$root.monitorList);
             let exportData = {
                 version: this.$root.info.version,

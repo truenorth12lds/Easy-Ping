@@ -169,7 +169,7 @@ class Monitor extends BeanModel {
                         timeout: this.interval * 1000 * 0.8,
                         headers: {
                             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-                            "User-Agent": "Uptime-Kuma/" + version,
+                            "User-Agent": "easy-ping/" + version,
                             ...(this.headers ? JSON.parse(this.headers) : {}),
                             ...(basicAuthHeader),
                         },
@@ -212,7 +212,7 @@ class Monitor extends BeanModel {
                         debug("Cert Info Query Time: " + (dayjs().valueOf() - certInfoStartTime) + "ms");
                     }
 
-                    if (process.env.UPTIME_KUMA_LOG_RESPONSE_BODY_MONITOR_ID == this.id) {
+                    if (process.env.easy_ping_LOG_RESPONSE_BODY_MONITOR_ID == this.id) {
                         console.log(res.data);
                     }
 
@@ -320,7 +320,7 @@ class Monitor extends BeanModel {
                         timeout: this.interval * 1000 * 0.8,
                         headers: {
                             "Accept": "*/*",
-                            "User-Agent": "Uptime-Kuma/" + version,
+                            "User-Agent": "easy-ping/" + version,
                         },
                         httpsAgent: new https.Agent({
                             maxCachedSessions: 0,      // Use Custom agent to disable session reuse (https://github.com/nodejs/node/issues/3940)
@@ -444,7 +444,7 @@ class Monitor extends BeanModel {
             } catch (e) {
                 console.trace(e);
                 errorLog(e, false);
-                console.error("Please report to https://github.com/louislam/uptime-kuma/issues");
+                console.error("Please report to https://github.com/truenorth12lds/easy-ping/issues");
 
                 if (! this.isStop) {
                     console.log("Try to restart the monitor");

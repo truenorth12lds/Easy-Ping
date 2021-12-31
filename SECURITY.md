@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-Please report security issues to uptime@kuma.pet.
+Please report security issues to uptime@ping.pet.
 
 Do not use the issue tracker or discuss it in the public as it will cause more damage.
 
@@ -11,7 +11,7 @@ Do not use the issue tracker or discuss it in the public as it will cause more d
 Use this section to tell people about which versions of your project are
 currently being supported with security updates.
 
-### Uptime Kuma Versions
+### Uptime ping Versions
 
 | Version | Supported          |
 | ------- | ------------------ |

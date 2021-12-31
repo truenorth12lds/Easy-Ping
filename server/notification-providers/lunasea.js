@@ -13,7 +13,7 @@ class LunaSea extends NotificationProvider {
         try {
             if (heartbeatJSON == null) {
                 let testdata = {
-                    "title": "Uptime Kuma Alert",
+                    "title": "Uptime ping Alert",
                     "body": "Testing Successful.",
                 }
                 await axios.post(lunaseadevice, testdata)
@@ -22,7 +22,7 @@ class LunaSea extends NotificationProvider {
 
             if (heartbeatJSON["status"] == DOWN) {
                 let downdata = {
-                    "title": "UptimeKuma Alert: " + monitorJSON["name"],
+                    "title": "Uptimeping Alert: " + monitorJSON["name"],
                     "body": "[🔴 Down] " + heartbeatJSON["msg"] + "\nTime (UTC): " + heartbeatJSON["time"],
                 }
                 await axios.post(lunaseadevice, downdata)
@@ -31,7 +31,7 @@ class LunaSea extends NotificationProvider {
 
             if (heartbeatJSON["status"] == UP) {
                 let updata = {
-                    "title": "UptimeKuma Alert: " + monitorJSON["name"],
+                    "title": "Uptimeping Alert: " + monitorJSON["name"],
                     "body": "[✅ Up] " + heartbeatJSON["msg"] + "\nTime (UTC): " + heartbeatJSON["time"],
                 }
                 await axios.post(lunaseadevice, updata)

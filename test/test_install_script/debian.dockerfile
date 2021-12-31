@@ -7,4 +7,4 @@ FROM debian
 # RUN node -v
 
 COPY ./install.sh .
-RUN bash install.sh local /opt/uptime-kuma 3000 0.0.0.0
+RUN bash install.sh local /opt/easy-ping 3000 0.0.0.0

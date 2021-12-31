@@ -29,7 +29,7 @@ afterAll(() => {
 const baseURL = "http://127.0.0.1:3002";
 
 describe("Init", () => {
-    const title = "Uptime Kuma";
+    const title = "Uptime ping";
 
     beforeAll(async () => {
         await page.goto(baseURL);
@@ -275,7 +275,7 @@ describe("Init", () => {
      */
 
     describe("Status Page", () => {
-        const title = "Uptime Kuma";
+        const title = "Uptime ping";
         beforeAll(async () => {
             await page.goto(baseURL + "/status");
         });

@@ -14,7 +14,7 @@ class Gotify extends NotificationProvider {
             await axios.post(`${notification.gotifyserverurl}/message?token=${notification.gotifyapplicationToken}`, {
                 "message": msg,
                 "priority": notification.gotifyPriority || 8,
-                "title": "Uptime-Kuma",
+                "title": "easy-ping",
             })
 
             return okMsg;

@@ -179,7 +179,7 @@ export default {
     "Edit Status Page": "ویرایش صفحه وضعیت",
     "Status Page": "صفحه وضعیت",
     "Go to Dashboard": "رفتن به پیشخوان",
-    "Uptime Kuma": "آپتایم کوما",
+    "Uptime ping": "آپتایم کوما",
     records: "مورد",
     "One record": "یک مورد",
     Info: "اطلاعات",

@@ -10,7 +10,7 @@ const knex = require("knex");
  */
 class Database {
 
-    static templatePath = "./db/kuma.db";
+    static templatePath = "./db/ping.db";
 
     /**
      * Data Dir (Default: ./data)
@@ -66,7 +66,7 @@ class Database {
     static init(args) {
         // Data Directory (must be end with "/")
         Database.dataDir = process.env.DATA_DIR || args["data-dir"] || "./data/";
-        Database.path = Database.dataDir + "kuma.db";
+        Database.path = Database.dataDir + "ping.db";
         if (! fs.existsSync(Database.dataDir)) {
             fs.mkdirSync(Database.dataDir, { recursive: true });
         }
@@ -161,8 +161,8 @@ class Database {
                 await Database.close();
 
                 console.error(ex);
-                console.error("Start Uptime-Kuma failed due to issue patching the database");
-                console.error("Please submit a bug report if you still encounter the problem after restart: https://github.com/louislam/uptime-kuma/issues");
+                console.error("Start easy-ping failed due to issue patching the database");
+                console.error("Please submit a bug report if you still encounter the problem after restart: https://github.com/truenorth12lds/easy-ping/issues");
 
                 this.restore();
                 process.exit(1);
@@ -200,8 +200,8 @@ class Database {
             await Database.close();
 
             console.error(ex);
-            console.error("Start Uptime-Kuma failed due to issue patching the database");
-            console.error("Please submit the bug report if you still encounter the problem after restart: https://github.com/louislam/uptime-kuma/issues");
+            console.error("Start easy-ping failed due to issue patching the database");
+            console.error("Please submit the bug report if you still encounter the problem after restart: https://github.com/truenorth12lds/easy-ping/issues");
 
             this.restore();
 
@@ -322,7 +322,7 @@ class Database {
     static backup(version) {
         if (! this.backupPath) {
             console.info("Backing up the database");
-            this.backupPath = this.dataDir + "kuma.db.bak" + version;
+            this.backupPath = this.dataDir + "ping.db.bak" + version;
             fs.copyFileSync(Database.path, this.backupPath);
 
             const shmPath = Database.path + "-shm";

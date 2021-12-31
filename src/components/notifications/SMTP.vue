@@ -39,14 +39,14 @@
 
         <div class="mb-3">
             <label for="from-email" class="form-label">{{ $t("From Email") }}</label>
-            <input id="from-email" v-model="$parent.notification.smtpFrom" type="text" class="form-control" required autocomplete="false" placeholder="&quot;Uptime Kuma&quot; &lt;example@kuma.pet&gt;">
+            <input id="from-email" v-model="$parent.notification.smtpFrom" type="text" class="form-control" required autocomplete="false" placeholder="&quot;Uptime ping&quot; &lt;example@ping.pet&gt;">
             <div class="form-text">
             </div>
         </div>
 
         <div class="mb-3">
             <label for="to-email" class="form-label">{{ $t("To Email") }}</label>
-            <input id="to-email" v-model="$parent.notification.smtpTo" type="text" class="form-control" autocomplete="false" placeholder="example2@kuma.pet, example3@kuma.pet" :required="!hasRecipient">
+            <input id="to-email" v-model="$parent.notification.smtpTo" type="text" class="form-control" autocomplete="false" placeholder="example2@ping.pet, example3@ping.pet" :required="!hasRecipient">
         </div>
 
         <div class="mb-3">

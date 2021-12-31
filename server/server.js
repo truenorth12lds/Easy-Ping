@@ -1,4 +1,4 @@
-console.log("Welcome to Uptime Kuma");
+console.log("Welcome to Uptime ping");
 const args = require("args-parser")(process.argv);
 const { sleep, debug, getRandomInt, genSecret } = require("../src/util");
 const config = require("./config");
@@ -63,7 +63,7 @@ console.info("Version: " + checkVersion.version);
 
 // If host is omitted, the server will accept connections on the unspecified IPv6 address (::) when IPv6 is available and the unspecified IPv4 address (0.0.0.0) otherwise.
 // Dual-stack support for (::)
-let hostname = process.env.UPTIME_KUMA_HOST || args.host;
+let hostname = process.env.easy_ping_HOST || args.host;
 
 // Also read HOST if not FreeBSD, as HOST is a system environment variable in FreeBSD
 if (!hostname && !FBSD) {
@@ -74,12 +74,12 @@ if (hostname) {
     console.log("Custom hostname: " + hostname);
 }
 
-const port = parseInt(process.env.UPTIME_KUMA_PORT || process.env.PORT || args.port || 3001);
+const port = parseInt(process.env.easy_ping_PORT || process.env.PORT || args.port || 3001);
 
 // SSL
-const sslKey = process.env.UPTIME_KUMA_SSL_KEY || process.env.SSL_KEY || args["ssl-key"] || undefined;
-const sslCert = process.env.UPTIME_KUMA_SSL_CERT || process.env.SSL_CERT || args["ssl-cert"] || undefined;
-const disableFrameSameOrigin = !!process.env.UPTIME_KUMA_DISABLE_FRAME_SAMEORIGIN || args["disable-frame-sameorigin"] || false;
+const sslKey = process.env.easy_ping_SSL_KEY || process.env.SSL_KEY || args["ssl-key"] || undefined;
+const sslCert = process.env.easy_ping_SSL_CERT || process.env.SSL_CERT || args["ssl-cert"] || undefined;
+const disableFrameSameOrigin = !!process.env.easy_ping_DISABLE_FRAME_SAMEORIGIN || args["disable-frame-sameorigin"] || false;
 
 // 2FA / notp verification defaults
 const twofa_verification_opts = {
@@ -218,7 +218,7 @@ exports.entryPage = "dashboard";
     app.use("/upload", express.static(Database.uploadDir));
 
     app.get("/.well-known/change-password", async (_, response) => {
-        response.redirect("https://github.com/louislam/uptime-kuma/wiki/Reset-Password-via-CLI");
+        response.redirect("https://github.com/truenorth12lds/easy-ping/wiki/Reset-Password-via-CLI");
     });
 
     // API Router
@@ -370,10 +370,10 @@ exports.entryPage = "dashboard";
 
                     // Google authenticator doesn't like equal signs
                     // The fix is found at https://github.com/guyht/notp
-                    // Related issue: https://github.com/louislam/uptime-kuma/issues/486
+                    // Related issue: https://github.com/truenorth12lds/easy-ping/issues/486
                     encodedSecret = encodedSecret.toString().replace(/=/g, "");
 
-                    let uri = `otpauth://totp/Uptime%20Kuma:${user.username}?secret=${encodedSecret}`;
+                    let uri = `otpauth://totp/Uptime%20ping:${user.username}?secret=${encodedSecret}`;
 
                     await R.exec("UPDATE `user` SET twofa_secret = ? WHERE id = ? ", [
                         newSecret,
@@ -494,7 +494,7 @@ exports.entryPage = "dashboard";
                 }
 
                 if ((await R.count("user")) !== 0) {
-                    throw new Error("Uptime Kuma has been initialized. If you want to run setup again, please delete the database.");
+                    throw new Error("Uptime ping has been initialized. If you want to run setup again, please delete the database.");
                 }
 
                 let user = R.dispense("user");
@@ -1444,7 +1444,7 @@ async function initDatabase(testMode = false) {
         console.log("Load JWT secret from database.");
     }
 
-    // If there is no record in user table, it is a new Uptime Kuma instance, need to setup
+    // If there is no record in user table, it is a new Uptime ping instance, need to setup
     if ((await R.count("user")) === 0) {
         console.log("No user, need setup");
         needSetup = true;
@@ -1541,5 +1541,5 @@ gracefulShutdown(server, {
 process.addListener("unhandledRejection", (error, promise) => {
     console.trace(error);
     errorLog(error, false);
-    console.error("If you keep encountering errors, please report to https://github.com/louislam/uptime-kuma/issues");
+    console.error("If you keep encountering errors, please report to https://github.com/truenorth12lds/easy-ping/issues");
 });

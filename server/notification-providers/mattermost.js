@@ -9,7 +9,7 @@ class Mattermost extends NotificationProvider {
     async send(notification, msg, monitorJSON = null, heartbeatJSON = null) {
         let okMsg = "Sent Successfully.";
         try {
-            const mattermostUserName = notification.mattermostusername || "Uptime Kuma";
+            const mattermostUserName = notification.mattermostusername || "Uptime ping";
             // If heartbeatJSON is null, assume we're testing.
             if (heartbeatJSON == null) {
                 let mattermostTestData = {
@@ -27,7 +27,7 @@ class Mattermost extends NotificationProvider {
             if (heartbeatJSON["status"] == DOWN) {
                 let mattermostdowndata = {
                     username: mattermostUserName,
-                    text: "Uptime Kuma Alert",
+                    text: "Uptime ping Alert",
                     channel: mattermostChannel,
                     icon_emoji: mattermostIconEmoji,
                     icon_url: mattermostIconUrl,
@@ -71,7 +71,7 @@ class Mattermost extends NotificationProvider {
             } else if (heartbeatJSON["status"] == UP) {
                 let mattermostupdata = {
                     username: mattermostUserName,
-                    text: "Uptime Kuma Alert",
+                    text: "Uptime ping Alert",
                     channel: mattermostChannel,
                     icon_emoji: mattermostIconEmoji,
                     icon_url: mattermostIconUrl,

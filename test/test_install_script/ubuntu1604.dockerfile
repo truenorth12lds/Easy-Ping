@@ -7,4 +7,4 @@ RUN apt --yes install curl
 # RUN ln -s /usr/bin/nodejs /usr/bin/node
 # RUN node -v
 
-RUN curl -o kuma_install.sh http://git.kuma.pet/install.sh && bash kuma_install.sh local /opt/uptime-kuma 3000 0.0.0.0
+RUN curl -o ping_install.sh http://git.ping.pet/install.sh && bash ping_install.sh local /opt/easy-ping 3000 0.0.0.0

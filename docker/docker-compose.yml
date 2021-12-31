@@ -4,10 +4,10 @@
 version: '3.3'
 
 services:
-  uptime-kuma:
-    image: louislam/uptime-kuma
-    container_name: uptime-kuma
+  easy-ping:
+    image: truenorth12lds/easy-ping
+    container_name: easy-ping
     volumes:
-      - ./uptime-kuma:/app/data
+      - ./easy-ping:/app/data
     ports:
       - 3001:3001

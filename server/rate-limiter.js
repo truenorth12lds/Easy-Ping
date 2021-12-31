@@ -1,7 +1,7 @@
 const { RateLimiter } = require("limiter");
 const { debug } = require("../src/util");
 
-class KumaRateLimiter {
+class pingRateLimiter {
     constructor(config) {
         this.errorMessage = config.errorMessage;
         this.rateLimiter = new RateLimiter(config);
@@ -27,7 +27,7 @@ class KumaRateLimiter {
     }
 }
 
-const loginRateLimiter = new KumaRateLimiter({
+const loginRateLimiter = new pingRateLimiter({
     tokensPerInterval: 20,
     interval: "minute",
     fireImmediately: true,

@@ -52,7 +52,7 @@
                     </tbody>
                 </table>
 
-                <div class="d-flex justify-content-center kuma_pagination">
+                <div class="d-flex justify-content-center ping_pagination">
                     <pagination
                         v-model="page"
                         :records="importantHeartBeatList.length"

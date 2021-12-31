@@ -1,6 +1,6 @@
-# Uptime Kuma
+# Uptime ping
 
-<a target="_blank" href="https://github.com/louislam/uptime-kuma"><img src="https://img.shields.io/github/stars/louislam/uptime-kuma" /></a> <a target="_blank" href="https://hub.docker.com/r/louislam/uptime-kuma"><img src="https://img.shields.io/docker/pulls/louislam/uptime-kuma" /></a> <a target="_blank" href="https://hub.docker.com/r/louislam/uptime-kuma"><img src="https://img.shields.io/docker/v/louislam/uptime-kuma/latest?label=docker%20image%20ver." /></a> <a target="_blank" href="https://github.com/louislam/uptime-kuma"><img src="https://img.shields.io/github/last-commit/louislam/uptime-kuma" /></a>  <a target="_blank" href="https://opencollective.com/uptime-kuma"><img src="https://opencollective.com/uptime-kuma/total/badge.svg?label=Open%20Collective%20Backers&color=brightgreen" /></a>
+<a target="_blank" href="https://github.com/truenorth12lds/easy-ping"><img src="https://img.shields.io/github/stars/truenorth12lds/easy-ping" /></a> <a target="_blank" href="https://hub.docker.com/r/truenorth12lds/easy-ping"><img src="https://img.shields.io/docker/pulls/truenorth12lds/easy-ping" /></a> <a target="_blank" href="https://hub.docker.com/r/truenorth12lds/easy-ping"><img src="https://img.shields.io/docker/v/truenorth12lds/easy-ping/latest?label=docker%20image%20ver." /></a> <a target="_blank" href="https://github.com/truenorth12lds/easy-ping"><img src="https://img.shields.io/github/last-commit/truenorth12lds/easy-ping" /></a>  <a target="_blank" href="https://opencollective.com/easy-ping"><img src="https://opencollective.com/easy-ping/total/badge.svg?label=Open%20Collective%20Backers&color=brightgreen" /></a>
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/louislam?label=GitHub%20Sponsors)](https://github.com/sponsors/louislam)
 
 <div align="center" width="100%">
@@ -9,25 +9,25 @@
 
 It is a self-hosted monitoring tool like "Uptime Robot".
 
-<img src="https://uptime.kuma.pet/img/dark.jpg" width="700" alt="" />
+<img src="https://uptime.ping.pet/img/dark.jpg" width="700" alt="" />
 
 ## 🥔 Live Demo
 
 Try it!
 
-https://demo.uptime.kuma.pet
+https://demo.uptime.ping.pet
 
 It is a temporary live demo, all data will be deleted after 10 minutes. The server is located in Tokyo, so if you live far from there, it may affect your experience. I suggest that you should install and try it out for the best demo experience.
 
-VPS is sponsored by Uptime Kuma sponsors on [Open Collective](https://opencollective.com/uptime-kuma)! Thank you so much!
+VPS is sponsored by Uptime ping sponsors on [Open Collective](https://opencollective.com/easy-ping)! Thank you so much!
 
 ## ⭐ Features
 
 * Monitoring uptime for HTTP(s) / TCP / HTTP(s) Keyword / Ping / DNS Record / Push / Steam Game Server.
 * Fancy, Reactive, Fast UI/UX.
-* Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and [70+ notification services, click here for the full list](https://github.com/louislam/uptime-kuma/tree/master/src/components/notifications).
+* Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and [70+ notification services, click here for the full list](https://github.com/truenorth12lds/easy-ping/tree/master/src/components/notifications).
 * 20 second intervals.
-* [Multi Languages](https://github.com/louislam/uptime-kuma/tree/master/src/languages)
+* [Multi Languages](https://github.com/truenorth12lds/easy-ping/tree/master/src/languages)
 * Simple Status Page
 * Ping Chart
 * Certificate Info
@@ -37,8 +37,8 @@ VPS is sponsored by Uptime Kuma sponsors on [Open Collective](https://opencollec
 ### 🐳 Docker
 
 ```bash
-docker volume create uptime-kuma
-docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+docker volume create easy-ping
+docker run -d --restart=always -p 3001:3001 -v easy-ping:/app/data --name easy-ping truenorth12lds/easy-ping:1
 ```
 
 ⚠️ Please use a **local volume** only. Other types such as NFS are not supported.
@@ -53,8 +53,8 @@ Required Tools: Node.js >= 14, git and pm2.
 # Update your npm to the latest version
 npm install npm -g
 
-git clone https://github.com/louislam/uptime-kuma.git
-cd uptime-kuma
+git clone https://github.com/truenorth12lds/easy-ping.git
+cd easy-ping
 npm run setup
 
 # Option 1. Try it
@@ -62,7 +62,7 @@ node server/server.js
 
 # (Recommended) Option 2. Run in background using PM2
 # Install PM2 if you don't have it: npm install pm2 -g
-pm2 start server/server.js --name uptime-kuma
+pm2 start server/server.js --name easy-ping
 ```
 
 Browse to http://localhost:3001 after starting.
@@ -71,35 +71,35 @@ Browse to http://localhost:3001 after starting.
 
 If you need more options or need to browse via a reverse proxy, please read:
 
-https://github.com/louislam/uptime-kuma/wiki/%F0%9F%94%A7-How-to-Install
+https://github.com/truenorth12lds/easy-ping/wiki/%F0%9F%94%A7-How-to-Install
 
 ## 🆙 How to Update
 
 Please read:
 
-https://github.com/louislam/uptime-kuma/wiki/%F0%9F%86%99-How-to-Update
+https://github.com/truenorth12lds/easy-ping/wiki/%F0%9F%86%99-How-to-Update
 
 ## 🆕 What's Next?
 
 I will mark requests/issues to the next milestone.
 
-https://github.com/louislam/uptime-kuma/milestones
+https://github.com/truenorth12lds/easy-ping/milestones
 
 Project Plan:
 
-https://github.com/louislam/uptime-kuma/projects/1
+https://github.com/truenorth12lds/easy-ping/projects/1
 
 ## ❤️ Sponsors
 
 Thank you so much! (GitHub Sponsors will be updated manually. OpenCollective sponsors will be updated automatically, the list will be cached by GitHub though. It may need some time to be updated)
 
-<img src="https://uptime.kuma.pet/sponsors?v=3" alt />
+<img src="https://uptime.ping.pet/sponsors?v=3" alt />
 
 ## 🖼 More Screenshots
 
 Light Mode:
 
-<img src="https://uptime.kuma.pet/img/light.jpg" width="512" alt="" />
+<img src="https://uptime.ping.pet/img/light.jpg" width="512" alt="" />
 
 Status Page:
 
@@ -107,11 +107,11 @@ Status Page:
 
 Settings Page:
 
-<img src="https://louislam.net/uptimekuma/2.jpg" width="400" alt="" />
+<img src="https://louislam.net/uptimeping/2.jpg" width="400" alt="" />
 
 Telegram Notification Sample:
 
-<img src="https://louislam.net/uptimekuma/3.jpg" width="400" alt="" />
+<img src="https://louislam.net/uptimeping/3.jpg" width="400" alt="" />
 
 ## Motivation
 
@@ -128,20 +128,20 @@ If you love this project, please consider giving me a ⭐.
 
 ### Issues Page
 
-You can discuss or ask for help in [issues](https://github.com/louislam/uptime-kuma/issues).
+You can discuss or ask for help in [issues](https://github.com/truenorth12lds/easy-ping/issues).
 
 ### Subreddit
 
 My Reddit account: louislamlam
 You can mention me if you ask a question on Reddit.
-https://www.reddit.com/r/UptimeKuma/
+https://www.reddit.com/r/Uptimeping/
 
 ## Contribute
 
-If you want to report a bug or request a new feature. Free feel to open a [new issue](https://github.com/louislam/uptime-kuma/issues).
+If you want to report a bug or request a new feature. Free feel to open a [new issue](https://github.com/truenorth12lds/easy-ping/issues).
 
-If you want to translate Uptime Kuma into your language, please read: https://github.com/louislam/uptime-kuma/tree/master/src/languages
+If you want to translate Uptime ping into your language, please read: https://github.com/truenorth12lds/easy-ping/tree/master/src/languages
 
-If you want to modify Uptime Kuma, this guideline may be useful for you: https://github.com/louislam/uptime-kuma/blob/master/CONTRIBUTING.md
+If you want to modify Uptime ping, this guideline may be useful for you: https://github.com/truenorth12lds/easy-ping/blob/master/CONTRIBUTING.md
 
 English proofreading is needed too because my grammar is not that great, sadly. Feel free to correct my grammar in this README, source code, or wiki.
